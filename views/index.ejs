@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="BirdApp">
 <head>
   <meta charset="UTF-8">
   <title>BirdWatchr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/angular/angular.js" ></script>
   <script src="/jquery/dist/jquery.min.js"></script>
   <script src="/js/main.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/birds_controller.js" ></script>
 </head>
 <body>
   <h1>Birds of NY</h1>
   <p>If you see something, say something!</p>
   <a href="/sightings/new">Spotted a bird?</a>
-  <div id="recent-sightings">
+  <div ng-controller="BirdsController as birds" id="recent-sightings" >
+    <input type="text" ng-model="birds.name">
+    <input type="text" ng-model="birds.locale">
+    <button ng-click="birds.add()">Add Sighting</button>
     <h2>Recent Sightings!</h2>
     <ul>
-      <!-- TODO format dates with moment.js -->
-      <% sightings.forEach(function(sighting){ %>
-        <li>
-          <span class="bird">
-            <%= sighting.bird %> last seen on <em><%= sighting.createdAt %></em>
-          </span>
-        </li>
-      <% }) %>
+      <li ng-repeat="bird in birds.all">
+        <span class="bird">
+          {{bird.bird}} last seen on <em> {{bird.date}} </em> at {{bird.lat}}, {{bird.lng}}
+        </span>
+      </li>
     </ul>
   </div>
 </body>

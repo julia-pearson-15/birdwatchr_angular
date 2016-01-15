@@ -1,0 +1,31 @@
+[
+
+  {
+    "lat":"40.7127837",
+    "lng":"-74.0059413",
+    "location": "Brooklyn , NY",
+    "bird": "Kea",
+    "date": "2011-05-11"
+  },
+  {
+    "lat":"40.6781784",
+    "lng":"-73.9441579",
+    "location": "New York, NY",
+    "bird": "Dove",
+    "date": "2012-11-10"
+  },
+  {
+    "lat":"42.411223",
+    "lng":"-73.525481",
+    "location": "Queens, NY",
+    "bird": "Squab",
+    "date": "2013-11-10"
+  },
+  {
+    "lat":"40.7282239",
+    "lng":"-73.7948516",
+    "location": "East Chatham, NY",
+    "bird": "Owl",
+    "date": "2014-01-10"
+  }
+]
